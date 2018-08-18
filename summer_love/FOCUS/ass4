@@ -1,0 +1,35 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+class A
+{
+public:
+void fnc(int x, int y, int z)
+{
+int x1 = x;
+int y1 = y *cos(-3.14/4) - z *sin(-3.14/4);
+int z1 = 300 + y *sin(-3.14/4) + z*cos(-3.14/4);
+cout<<x1<<","<<y1<<","<<z1<<endl;
+}
+};
+int main()
+{
+A ob;
+ob.fnc(-60,-60,20);
+ob.fnc(-40,-60,20);
+ob.fnc(-40,-40,20);
+ob.fnc(-60,-40,20);
+ob.fnc(20,-40,20);
+ob.fnc(40,-40,20);
+ob.fnc(40,-20,20);
+ob.fnc(20,-20,20);
+ob.fnc(-40,20,20);
+ob.fnc(-20,20,20);
+ob.fnc(-20,40,20);
+ob.fnc(-40,40,20);
+ob.fnc(60,60,20);
+ob.fnc(80,60,20);
+ob.fnc(80,80,20);
+ob.fnc(60,80,20);
+return 0;
+}

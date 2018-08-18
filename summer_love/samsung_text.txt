@@ -1,0 +1,41 @@
+A man wanted to climb a rock. Rock is m feets wide and n feets high. There are few stones which are bulging out in the rock where man can put his feet. If we have many edgy stones bulging out in a series , then we can move in horizontal direction also. There will be a source from where man starts climbing and there is a destination point on the rock where man has to reach. If we represent whole rock in form of grid, the source point will always be the lowest leftmost point of the grid represented as '2' in the grid. The destination where that person has to reach is represented as '3'. A man can climb only in upward and descend to the downward direction according to the position of the destination. Though he can walk in horizontal direction if there is a series of stones bulging out. Man can climb on those stones only which are bulging out. These stones are represented as '1' in grid. Our aim is to find the minimum difficulty in climbing the wall to reach the destination, where difficulty is defined as follows :-
+
+Difficulty is the maximum jump(vertical direction) a man has to make while moving on a path to reach destination.
+
+Constraints :-
+
+1<=m,n<=50.
+Time : 3s
+
+
+I/p:
+
+4 5
+1 0 3 1 1
+0 0 0 0 1
+1 1 0 0 1
+2 1 1 1 1
+
+Note: Last row will always be 1 or 2(i.e for source)
+
+O/p:
+
+Jumps = 1
+
+Explanation :
+
+Here Destination is (1,3) and source is at (4,1).
+(We are considering only those paths from where we can actually reach the destination)
+
+1st path: (4,1)->(4,2)->(4,3)->(1,3)
+There is a jump from (4,3) to (1,3) of value 3 i.e jump = absolute(Destination row - Source row)
+Difficulty of this path = 3
+2nd path: (4,1)->(4,2)->(4,3)->(4,4)->(1,4)->(1,3)
+There is a jump from (4,4) to (1,4) of value 3
+Difficulty = 3
+3rd path: (4,1)->(4,2)->(4,3)->(4,4)->(4,5)->(3,5)->(2,5)->(1,5)->(1,4)->(1,3)
+There are 3 jumps in this path from (4,5)->(3,5), (3,5)->(2,5) and (2,5)->(1,5) all of value 1. So maximum jump = 1;
+Difficulty = 1
+
+So minimum of all the difficulties = 1;
+Answer = 1 jump
